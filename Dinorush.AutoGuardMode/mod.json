@@ -1,0 +1,31 @@
+{
+	"Name": "Default Guard Mode",
+	"Description": "Defaults your titan to guard mode when dropped, rather than follow.",
+	"LoadPriority": 1,
+	"Version": "1.0",
+
+	"ConVars": [
+		{
+			"Name": "default_guard_mode",
+			"DefaultValue": "1",
+			"Description": "0 - Normal mode behavior. 1 - Default to guard mode. 2 - Default to guard mode in LTS only.",
+			"Flags": 16777216
+		},
+		{
+			"Name": "default_guard_mode_once",
+			"DefaultValue": "0",
+			"Description": "Default to guard mode only on first drop rather than every drop. Vanilla behavior sets the default mode only on first drop.",
+			"Flags": 16777216
+		}
+	],
+
+	"Scripts": [
+		{
+			"Path": "cl_default_guard_init.nut",
+			"RunOn": "CLIENT && MP",
+			"ClientCallback": {
+				"After": "DefaultGuardMode_Init"
+			}
+		}
+	]
+}
