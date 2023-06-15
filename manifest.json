@@ -1,6 +1,6 @@
 {
     "name": "Auto_Guard_Mode",
-    "version_number": "1.0.1",
+    "version_number": "1.0.2",
     "description": "Automatically sets your auto-titan to guard mode on drop.",
     "website_url": "https://github.com/Dinorush/AutoGuardMode",
     "dependencies": []
