@@ -6,9 +6,9 @@
 
 	"ConVars": [
 		{
-			"Name": "default_guard_mode",
-			"DefaultValue": "1",
-			"Description": "0 - Normal mode behavior. 1 - Default to guard mode. 2 - Default to guard mode in LTS only.",
+			"Name": "default_guard_mode_lts_only",
+			"DefaultValue": "0",
+			"Description": "Only turns Default Guard Mode on in LTS.",
 			"Flags": 16777216
 		},
 		{
@@ -25,6 +25,13 @@
 			"RunOn": "CLIENT && MP",
 			"ClientCallback": {
 				"After": "DefaultGuardMode_Init"
+			}
+		},
+		{
+			"Path": "ui/default_guard_modsettings.nut",
+			"RunOn": "UI",
+			"UICallback": {
+				"Before": "DefaultGuardMode_AddModSettings"
 			}
 		}
 	]

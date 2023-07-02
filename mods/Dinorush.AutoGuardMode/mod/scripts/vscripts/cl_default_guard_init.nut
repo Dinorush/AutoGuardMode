@@ -19,8 +19,8 @@ void function DefaultGuardMode_Trigger( entity titan )
 	if ( cvOnce && file.setGuardMode )
 		return
 
-	int cvMode = GetConVarInt( "default_guard_mode" )
-	if ( cvMode == 1 || ( cvMode == 2 && GAMETYPE == LAST_TITAN_STANDING ) )
+	int cvMode = GetConVarInt( "default_guard_mode_lts_only" )
+	if ( cvMode == 0 || GAMETYPE == LAST_TITAN_STANDING )
 	{
 		player.ClientCommand( "TitanNextMode" )
 		SetAutoTitanModeHudIndicator( player, eNPCTitanMode.STAY )
